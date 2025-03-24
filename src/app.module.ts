@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
-import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { StickerModule } from './modules/stickers/sticker.module';
 import { DatabaseModule } from './database/database.module';
+import { UserModule } from './modules/users/user.module';
 
 @Module({
-  imports: [UserModule, AuthModule, StickerModule, DatabaseModule],
+  imports: [UserModule, AuthModule, DatabaseModule],
   controllers: [],
   providers: [],
 })
